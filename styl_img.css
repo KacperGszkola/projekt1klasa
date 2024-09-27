@@ -1,0 +1,65 @@
+.imghover:hover{
+    width: 50px;
+    height: 50px;
+    border: 2px solid khaki;
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.imghover_2:hover{
+    width: 70px;
+    height: 70px;
+    border: 2px solid khaki;
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes border{
+    0% {
+        border-color: darkorange;
+    }
+    50% {
+        border-color:khaki;
+    }
+    100% {
+        border-color: darkorange;
+    }
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tt_text{
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(30, 68, 121);
+    color: orange;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 3px solid khaki;
+    position: absolute;
+    width: 120px;
+    bottom: 120%;
+    left: 50%;
+    margin-left: -60px;
+    animation-name: border;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.tooltip:hover .tt_text{
+    visibility: visible;
+}
+.tooltip .tt_text::after{
+    content: " ";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: orange transparent transparent transparent;
+}
